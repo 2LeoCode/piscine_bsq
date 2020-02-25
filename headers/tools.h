@@ -6,7 +6,7 @@
 /*   By: lsuardi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 11:30:42 by lsuardi           #+#    #+#             */
-/*   Updated: 2020/02/25 10:54:11 by lsuardi          ###   ########.fr       */
+/*   Updated: 2020/02/25 17:15:25 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 # include				<unistd.h>
 # include				<stdio.h>
 # include				"file.h"
+# include				"calc.h"
 
 void	ft_check_args(int ac, char **av);
 int		ft_strlen(char *str);

@@ -6,7 +6,7 @@
 /*   By: lsuardi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 17:26:42 by lsuardi           #+#    #+#             */
-/*   Updated: 2020/02/25 15:08:39 by lsuardi          ###   ########.fr       */
+/*   Updated: 2020/02/25 17:27:25 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ struct s_line	*ft_addlink_lines(t_line *lines,
 		return (NULL);
 	if (tmp)
 	{
-		tmp->index = index;
+		tmp->index = index - 1;
 		if (!(tmp->line = ft_strdup(currentline)))
 			return (NULL);
 		tmp->nb_obs = ft_calc_obs(tmp->line, list);
