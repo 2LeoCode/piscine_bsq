@@ -6,7 +6,7 @@
 /*   By: lsuardi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 22:16:50 by lsuardi           #+#    #+#             */
-/*   Updated: 2020/02/25 12:18:33 by lsuardi          ###   ########.fr       */
+/*   Updated: 2020/02/25 15:09:04 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_get_line(char *buf)
 	i = 0;
 	while (buf[i] != '\n')
 		i++;
-	if(!(line = malloc(sizeof(char) * (i + 1))))
+	if (!(line = malloc(sizeof(char) * (i + 1))))
 		return (NULL);
 	i = 0;
 	while (buf[i] != '\n')

@@ -6,16 +6,17 @@
 /*   By: lsuardi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 17:26:42 by lsuardi           #+#    #+#             */
-/*   Updated: 2020/02/25 13:10:08 by lsuardi          ###   ########.fr       */
+/*   Updated: 2020/02/25 15:08:39 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/tools.h"
 
-struct s_line	*ft_addlink_lines(t_line *lines, char *currentline, int index, t_file *list)
+struct s_line	*ft_addlink_lines(t_line *lines,
+		char *currentline, int index, t_file *list)
 {
 	t_line *tmp;
-	
+
 	if (!(tmp = malloc(sizeof(t_line))))
 		return (NULL);
 	if (tmp)
@@ -48,7 +49,7 @@ struct s_line	*ft_addlines(char *buf, t_file *list)
 		lines = ft_addlink_lines(lines, curline, j, list);
 		j++;
 		if (lines == NULL)
-			return(NULL);
+			return (NULL);
 	}
 	return (lines);
 }
@@ -77,8 +78,8 @@ struct s_file	*ft_init_filelist(char *buf, t_file *filelist, int nb)
 {
 	int		i;
 	char	params[3];
-	int 	j;
-	
+	int		j;
+
 	i = 0;
 	j = -1;
 	while (buf[i] >= '0' && buf[i] <= '9')

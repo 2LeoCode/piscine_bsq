@@ -6,7 +6,7 @@
 /*   By: lsuardi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 12:58:46 by lsuardi           #+#    #+#             */
-/*   Updated: 2020/02/25 11:55:52 by lsuardi          ###   ########.fr       */
+/*   Updated: 2020/02/25 15:10:59 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		ft_atoin(char *str, int n)
 		nb += str[i] - 48;
 		i++;
 	}
-	return(nb);
+	return (nb);
 }
 
 void	ft_check_args(int ac, char **av)
@@ -64,7 +64,7 @@ char	*ft_strdup(char *str)
 	i = 0;
 	while (str[i])
 		i++;
-	if(!(point = (char*)malloc(i + 1)))
+	if (!(point = (char*)malloc(i + 1)))
 		return (NULL);
 	i = -1;
 	while (str[++i])

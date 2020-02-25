@@ -6,7 +6,7 @@
 /*   By: lsuardi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 13:15:01 by lsuardi           #+#    #+#             */
-/*   Updated: 2020/02/25 13:54:01 by lsuardi          ###   ########.fr       */
+/*   Updated: 2020/02/25 15:00:52 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,6 @@ int				*ft_pos_obs(char *line, t_file *list, int nb_obs);
 void			ft_display_lines(t_line *lines);
 void			ft_display_files(t_file *files);
 int				ft_check_files(char *buf);
+int				ft_check_lines(char *buf);
 
 #endif
