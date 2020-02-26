@@ -6,7 +6,7 @@
 /*   By: lsuardi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 15:22:32 by lsuardi           #+#    #+#             */
-/*   Updated: 2020/02/25 21:15:37 by lsuardi          ###   ########.fr       */
+/*   Updated: 2020/02/26 10:51:14 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ void	ft_get_square(t_file *file, t_square square, t_square *stock_square, t_coor
 int		ft_check_coords(t_square square, t_line *lines, t_coord map);
 void	ft_putsquare(t_square square, t_line *lines, t_file *file);
 void	ft_checknplace(t_file *file);
+int		ft_verify(int pos, int *pos_obs, int nb_os, int size);
 
 #endif

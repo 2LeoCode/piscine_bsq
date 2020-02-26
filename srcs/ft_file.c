@@ -6,7 +6,7 @@
 /*   By: lsuardi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 11:22:44 by lsuardi           #+#    #+#             */
-/*   Updated: 2020/02/25 18:47:05 by lsuardi          ###   ########.fr       */
+/*   Updated: 2020/02/26 23:14:04 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,35 +61,6 @@ int		ft_get_file(char *path, char *buf)
 	return (SUCCESS);
 }
 
-void test2(t_line *lines)
-{
-	t_line *tmp;
-
-	tmp = lines;
-
-	if (tmp)
-	{
-		test2(lines->next);
-		for (int i = 0; i < lines->nb_obs; i++)
-			printf("%d, ", lines->pos_obs[i]);
-		printf("\n");
-	}
-}
-
-void ft_test(t_file *file)
-{
-	t_file *tmp;
-
-	tmp = file;
-
-	if (tmp)
-	{
-		ft_test(file->next);
-		printf("NEW FILE\n");
-		test2(file->lines);
-	}
-}
-
 int		ft_read_file(int ac, char **av)
 {
 	char	buffer[BUF_SIZE + 1];
@@ -104,11 +75,6 @@ int		ft_read_file(int ac, char **av)
 		else if (!(file =
 					ft_init_filelist(buffer, file, ft_check_file(buffer))))
 			ft_putstr("memory error\n");
-	ft_checknplace(file);
 	ft_display_files(file);
-	//ft_clean_chain(line);
 	return (SUCCESS);
 }
-
-
-

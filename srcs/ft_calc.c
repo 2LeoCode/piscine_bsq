@@ -6,7 +6,7 @@
 /*   By: lsuardi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 15:14:20 by lsuardi           #+#    #+#             */
-/*   Updated: 2020/02/25 22:23:13 by lsuardi          ###   ########.fr       */
+/*   Updated: 2020/02/26 23:13:13 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int		ft_check_coords(t_square square, t_line *lines, t_coord map)
 {
-	t_line *tmp;
-	int i;
+	t_line	*tmp;
+	int		i;
 
 	tmp = lines;
 	i = 0;
@@ -27,7 +27,8 @@ int		ft_check_coords(t_square square, t_line *lines, t_coord map)
 			if (lines->nb_obs)
 				while (i < lines->nb_obs)
 				{
-					if (lines->pos_obs[i] >= square.x && tmp->pos_obs[i] < square.x + square.size)
+					if (lines->pos_obs[i] >= square.x
+							&& tmp->pos_obs[i] < square.x + square.size)
 						return (FAILURE);
 				}
 		}
@@ -37,8 +38,8 @@ int		ft_check_coords(t_square square, t_line *lines, t_coord map)
 
 void	ft_putsquare(t_square square, t_line *lines, t_file *file)
 {
-	t_line *tmp;
-	int i;
+	t_line	*tmp;
+	int		i;
 
 	i = square.x;
 	tmp = lines;
@@ -56,7 +57,8 @@ void	ft_putsquare(t_square square, t_line *lines, t_file *file)
 	}
 }
 
-void	ft_get_square(t_file *file, t_square square, t_square *stock_square, t_coord map)
+void	ft_get_square(t_file *file, t_square square,
+						t_square *stock_square, t_coord map)
 {
 	while (ft_check_coords(square, file->lines, map) != FAILURE)
 		square.size++;
@@ -66,9 +68,9 @@ void	ft_get_square(t_file *file, t_square square, t_square *stock_square, t_coor
 
 void	ft_place_square(t_file *file)
 {
-	t_coord map;
-	t_square square;
-	t_square stock_square;
+	t_coord		map;
+	t_square	square;
+	t_square	stock_square;
 
 	map.x = ft_strlen(file->lines->line);
 	map.y = file->nb_line;
